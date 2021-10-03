@@ -2,10 +2,7 @@ const express = require("express");
 const scoreRoute = express.Router();
 let scoreModel = require("../Model/Score");
 scoreRoute.route("/").get(function (req, res) {
-  const sortFn = { score: -1 }
   scoreModel.find()
-  .sort(sortFn)
-  .limit(10)
   .exec(function (err, score) {
     if (err) {
       console.log(err);
