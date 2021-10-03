@@ -1,0 +1,13 @@
+export const TOTAL_NO_GAME = "Total no. of Games";
+export const AVG_SCORE = "Average Score";
+export const LEADERBOARD = "Leaderboard";
+export const START_GAME = "Start Game";
+export const CLOSE = "Close";
+export const SHOW = "Show";
+export const SCORE = "SCORE";
+export const YES = "Yes";
+export const NO = "No";
+export const INSTRUCTION = "Instructions";
+export const GAME_COMPLETED = "Game Completed.";
+export const YOUR_SCORE = "Your Score";
+export const SAVE_SCORE = "Want to Save it?";
