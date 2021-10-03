@@ -7,7 +7,7 @@ const Leaderboard = ({ closeLeaderboard }) => {
   const getData = async () => {
     let result = await fetch(`${process.env.REACT_APP_API_URL}/api/scores`);
     result = await result.json();
-    const sortingFunction = (a, b) => (b.score < a.score ? 1 : -1);
+    const sortingFunction = (a, b) => (parseInt(b.score) > parseInt(a.score) ? 1 : -1);
     setData(result.sort(sortingFunction));
   };
   useEffect(() => {
@@ -41,7 +41,7 @@ const Leaderboard = ({ closeLeaderboard }) => {
         </div>
         <div className="leaderboard-list">
           <ul>
-            {data.map(({ score }, index) => (
+            {data.slice(0,10).map(({ score }, index) => (
               <div className="flex-center" key={index}>
                 <p>{index + 1}.</p>&nbsp;
                 <li>{score}</li>
